@@ -9,6 +9,8 @@ import PromoBanner from "@/components/promo-banner";
 import RestaurantList from "@/app/restaurants/[id]/components/restaurant-list";
 import Link from "next/link";
 
+export const dynamic = "force-dynamic";
+
 const fetch = async () => {
   const getProducts = db.product.findMany({
     where: {

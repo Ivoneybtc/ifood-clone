@@ -2,6 +2,8 @@ import Header from "@/components/header";
 import ProductItem from "@/app/products/[id]/components/product-item";
 import { db } from "@/lib/prisma";
 
+export const dynamic = "force-dynamic";
+
 const RecommendedProductsPage = async () => {
   const products = await db.product.findMany({
     where: {
